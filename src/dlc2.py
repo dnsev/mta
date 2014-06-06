@@ -238,7 +238,7 @@ class DownloadThreadManager(threading.Thread):
 		active_list = [];
 		for i in range(len(self.downloaders)):
 			if (self.downloaders[i].server is not None):
-				active_list.append(( self.downloaders[i].server , "{0:s}: {1:.0f}%".format(self.downloaders[i].server, (self.downloaders[i].bytes_complete / max(1, self.downloaders[i].bytes_total)) * 100)));
+				active_list.append(( self.downloaders[i].server , "{0:s}: {1:.0f}%".format(self.downloaders[i].server, (self.downloaders[i].bytes_complete * 100.0 / max(1, self.downloaders[i].bytes_total)))));
 
 		# Nothing
 		if (len(active_list) == 0):
