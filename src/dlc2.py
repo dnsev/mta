@@ -555,7 +555,7 @@ def main():
 		return -1;
 	else:
 		# Filter method regex
-		re_filter_method = re.compile(r"^([a-z])\s*-\s*([a-z])|([0-9])\s*-\s*([0-9])|([a-z0-9])|(\*)|(all)$");
+		re_filter_method = re.compile(r"^(?:([a-z])\s*-\s*([a-z])|([0-9])\s*-\s*([0-9])|([a-z0-9])|(\*)|(all))$");
 		match = re_filter_method.match(download_filter_str);
 		if (match is None):
 			sys.stderr.write("Invalid download filter\n");
