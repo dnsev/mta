@@ -12,6 +12,6 @@
 
 #### Notes:
 
-* This does <i>not</i> communicate with any server.
+* This does <i>not</i> communicate with any coordination server.
 * This only downloads what you tell it to (mostly by letter/number)
 * This is highly untested, so it may crash or not work. Preliminary testing shows it working though
